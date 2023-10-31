@@ -1850,6 +1850,12 @@ pre code {
   top: 0;
   width: 100%;
 }
+.post-body a:not(.btn) {
+  color: #0366d6;
+}
+.post-body a:not(.btn):hover {
+  color: #1589e9;
+}
 .post-gallery {
   display: flex;
   min-height: 200px;
