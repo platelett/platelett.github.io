@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222"><meta name="generator" content="Hexo 6.3.0">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha256-CTSx/A06dm1B063156EVh15m6Y67pAjZZaQc89LLSrU=" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css" integrity="sha256-PR7ttpcvz8qrF57fur/yAx1qXMFJeJFiA6pSzWi0OIE=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"platelet.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+
+    <meta name="description" content="此页面的 Telegram 频道。 更新记录    计算机硬件发展到现在，渐近复杂性不再有绝对的地位。在现代的超标量处理器中，相同数量的原始操作以不同的顺序执行可以产生上百倍的时间差异。在算法竞赛中，底层优化的提升空间越来越大，很多时候可以弥补算法上的先天不足，或者用暴力拿更多分，实际地提升竞赛成绩。在竞赛之外，我们也能更深入地认识计算机，提升代码质量。 除了宏观地减少计算量之外，主要的优化思路有">
+<meta property="og:type" content="website">
+<meta property="og:title" content="卡常 Tips">
+<meta property="og:url" content="https://platelet.top/hpc/index-new.html">
+<meta property="og:site_name" content="platelet&#39;s blog">
+<meta property="og:description" content="此页面的 Telegram 频道。 更新记录    计算机硬件发展到现在，渐近复杂性不再有绝对的地位。在现代的超标量处理器中，相同数量的原始操作以不同的顺序执行可以产生上百倍的时间差异。在算法竞赛中，底层优化的提升空间越来越大，很多时候可以弥补算法上的先天不足，或者用暴力拿更多分，实际地提升竞赛成绩。在竞赛之外，我们也能更深入地认识计算机，提升代码质量。 除了宏观地减少计算量之外，主要的优化思路有">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2023-11-02T11:50:46.000Z">
+<meta property="article:modified_time" content="2023-11-24T09:17:11.166Z">
+<meta property="article:tag" content="platelet">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="https://platelet.top/hpc/index-new">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":true,"permalink":"https://platelet.top/hpc/index-new.html","path":"hpc/index-new.html","title":"卡常 Tips"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>卡常 Tips | platelet's blog
+</title>
+  
+
+
+
+
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" class="use-motion">
+  <div class="headband"></div>
+
+  <main class="main">
+    <div class="column">
+      <header class="header" itemscope itemtype="http://schema.org/WPHeader"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <p class="site-title">platelet's blog</p>
+      <i class="logo-line"></i>
+    </a>
+      <p class="site-subtitle" itemprop="description">精于心，简于形</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger" aria-label="搜索" role="button">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu"><li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li><li class="menu-item menu-item-关于我"><a href="/about-me/" rel="section"><i class="fa fa-user fa-fw"></i>关于我</a></li><li class="menu-item menu-item-算法模板"><a href="/template/" rel="section"><i class="fa fa-code fa-fw"></i>算法模板</a></li><li class="menu-item menu-item-题解区"><a href="/solutions/" rel="section"><i class="fa fa-book fa-fw"></i>题解区</a></li><li class="menu-item menu-item-卡常-tips"><a href="/hpc/" rel="section"><i class="fa fa-book fa-fw"></i>卡常 Tips</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</header>
+        
+  
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%B8%80%E4%B8%AA%E6%9E%81%E7%AB%AF%E7%9A%84%E4%BE%8B%E5%AD%90"><span class="nav-number">1.</span> <span class="nav-text"> 一个极端的例子</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <p class="site-author-name" itemprop="name"></p>
+  <div class="site-description" itemprop="description"></div>
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    
+  </aside>
+
+
+    </div>
+
+    <div class="main-inner page posts-expand">
+
+
+    
+    
+    
+    <div class="post-block" lang="zh-CN"><header class="post-header">
+
+<h1 class="post-title" itemprop="name headline">卡常 Tips
+</h1>
+
+<div class="post-meta-container">
+</div>
+
+</header>
+
+      
+      
+      <div class="post-body">
+          <p>此页面的 <a target="_blank" rel="noopener" href="https://t.me/platelett">Telegram 频道</a>。</p>
+<details class="note info"><summary><p>更新记录</p>
+</summary>
+
+</details>
+<p>计算机硬件发展到现在，渐近复杂性不再有绝对的地位。在现代的超标量处理器中，相同数量的原始操作以不同的顺序执行可以产生上百倍的时间差异。在算法竞赛中，底层优化的提升空间越来越大，很多时候可以弥补算法上的先天不足，或者用暴力拿更多分，实际地提升竞赛成绩。在竞赛之外，我们也能更深入地认识计算机，提升代码质量。</p>
+<p>除了宏观地减少计算量之外，主要的优化思路有 <em>指令级并行</em>、<em>缓存</em>、<em>SIMD</em>，其中 <em>SIMD</em>（俗称指令集）在正式比赛中通常会禁用，目前不打算考虑它。</p>
+<p>既然讨论常数问题，我们需要制定一下标准：</p>
+<ul>
+<li>运行测试标准：编译器版本为 GCC 9.5.0，CPU 为 10750H，通过省电模式将时钟频率（主频）固定到 2.6 GHZ。</li>
+<li>汇编的性能分析标准：使用 Coffee Lake 微架构的数据，详情见 <a href="">指令表</a> 一节。</li>
+</ul>
+<p>目前分成了六个板块，见页面顶部。可以选择从以下内容开开始：</p>
+<ul>
+<li>先 理论知识 然后 通用优化。</li>
+<li>从 通用优化 和 数据结构 中不需要理论知识的部分开始。</li>
+</ul>
+<div class="note info"><h3 id="一个极端的例子"><a class="markdownIt-Anchor" href="#一个极端的例子"></a> 一个极端的例子</h3>
+<p>下面的 python 代码是 <span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mn>5000</mn><mo>×</mo><mn>5000</mn></mrow><annotation encoding="application/x-tex">5000\times 5000</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.72777em;vertical-align:-0.08333em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">×</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:0.64444em;vertical-align:0em;"></span><span class="mord">5</span><span class="mord">0</span><span class="mord">0</span><span class="mord">0</span></span></span></span> 的 double 矩阵乘法，自己测下要跑多久。</p>
+<div class='spoiler collapsed'>
+    <div class='spoiler-title'>
+        python
+    </div>
+    <div class='spoiler-content'>
+        <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> time</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line">a = np.random.rand(<span class="number">5000</span>, <span class="number">5000</span>)</span><br><span class="line">b = np.random.rand(<span class="number">5000</span>, <span class="number">5000</span>)</span><br><span class="line"></span><br><span class="line">start = time.time()</span><br><span class="line">c = np.matmul(a, b)</span><br><span class="line">end = time.time()</span><br><span class="line"><span class="built_in">print</span>(end - start)</span><br></pre></td></tr></table></figure>
+    </div>
+</div>
+</div><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+      </div>
+      
+      
+      
+    </div>
+
+    
+    
+
+
+    <div class="comments gitalk-container"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+  <div class="copyright">
+    &copy; 
+    <span itemprop="copyrightYear">2023</span>
+    <span class="with-love">
+      <i class="fa fa-heart"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder"></span>
+  </div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/" rel="noopener" target="_blank">NexT.Gemini</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up fa-lg"></i>
+    <span>0%</span>
+  </div>
+  <div class="reading-progress-bar"></div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/motion.js"></script><script src="/js/next-boot.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/hexo-generator-searchdb/1.4.1/search.js" integrity="sha256-1kfA5uHPf65M5cphT2dvymhkuyHPQp5A53EGZOnOLmc=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+
+
+  
+
+
+
+
+  
+
+  <script class="next-config" data-name="enableMath" type="application/json">true</script><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css" integrity="sha256-UF1fgpAiu3tPJN/uCqEUHNe7pnr+QR0SQDNfgglgtcM=" crossorigin="anonymous">
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
+
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"platelett","repo":"platelett.github.io","client_id":"019ccf0c5fc00da2d39e","client_secret":"62107d94198d8589a43cee96c18197d4977bcafb","admin_user":"platelett","distraction_free_mode":true,"proxy":null,"language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"fe68bcf286b19b8f21f708ef9f5b889a"}</script>
+<script src="/js/third-party/comments/gitalk.js"></script>
+
+</body>
+</html>
