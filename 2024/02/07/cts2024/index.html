@@ -19,27 +19,29 @@
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"platelet.top","root":"/","images":"/images","scheme":"Gemini","darkmode":false,"version":"8.18.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12},"copycode":{"enable":true,"style":null},"fold":{"enable":false,"height":500},"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":"gitalk","storage":true,"lazyload":false,"nav":null,"activeClass":"gitalk"},"stickytabs":false,"motion":{"enable":true,"async":false,"transition":{"menu_item":"fadeInDown","post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
 
-    <meta name="description" content="我在 codeforces 上发的原文">
+    <meta name="description" content="我终于迎来了我 OI 生涯的最后一站–国家队选拔（CTS）。相比于 NOI，CTS 给我留下了更愉快的回忆。由于 CTS 安排在 WC 期间，所以我和大多数 WC 选手一样，参加了 WC 的所有活动。在 WC 期间，我有幸认识了许多其他集训队的同学，听了有趣的课程，并且还取得了让我高兴的成绩。 最终选拔出的四名国家队成员已经众所周知，值得一提的是我们寝室独占了两席（这个台词的出处，懂的都懂）。 如">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在常量模数下将取模速度提高一倍">
-<meta property="og:url" content="https://platelet.top/2023/11/01/fast-mod/index.html">
+<meta property="og:title" content="cts2024">
+<meta property="og:url" content="https://platelet.top/2024/02/07/cts2024/index.html">
 <meta property="og:site_name" content="platelet&#39;s blog">
-<meta property="og:description" content="我在 codeforces 上发的原文">
+<meta property="og:description" content="我终于迎来了我 OI 生涯的最后一站–国家队选拔（CTS）。相比于 NOI，CTS 给我留下了更愉快的回忆。由于 CTS 安排在 WC 期间，所以我和大多数 WC 选手一样，参加了 WC 的所有活动。在 WC 期间，我有幸认识了许多其他集训队的同学，听了有趣的课程，并且还取得了让我高兴的成绩。 最终选拔出的四名国家队成员已经众所周知，值得一提的是我们寝室独占了两席（这个台词的出处，懂的都懂）。 如">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-11-01T13:57:10.000Z">
-<meta property="article:modified_time" content="2023-11-01T14:00:10.431Z">
-<meta property="article:tag" content="platelet">
+<meta property="og:image" content="https://platelet.top/2024/02/07/cts2024/badge-min.jpg">
+<meta property="article:published_time" content="2024-02-07T14:15:50.000Z">
+<meta property="article:modified_time" content="2024-02-08T11:57:53.602Z">
+<meta property="article:tag" content="CTS &#x2F; WC 2024 无憾退役记">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://platelet.top/2024/02/07/cts2024/badge-min.jpg">
 
 
-<link rel="canonical" href="https://platelet.top/2023/11/01/fast-mod/">
+<link rel="canonical" href="https://platelet.top/2024/02/07/cts2024/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://platelet.top/2023/11/01/fast-mod/","path":"2023/11/01/fast-mod/","title":"在常量模数下将取模速度提高一倍"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"https://platelet.top/2024/02/07/cts2024/","path":"2024/02/07/cts2024/","title":"cts2024"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>在常量模数下将取模速度提高一倍 | platelet's blog</title>
+<title>cts2024 | platelet's blog</title>
   
 
 
@@ -126,7 +128,7 @@
   
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -139,6 +141,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-29-%E6%8A%A5%E5%88%B0%E6%97%A5"><span class="nav-number">1.</span> <span class="nav-text"> 1-29 报到日</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-30"><span class="nav-number">2.</span> <span class="nav-text"> 1-30</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#1-31"><span class="nav-number">3.</span> <span class="nav-text"> 1-31</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-01-cts-day-1-wc"><span class="nav-number">4.</span> <span class="nav-text"> 2-01 CTS Day 1 &amp; WC</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-02"><span class="nav-number">5.</span> <span class="nav-text"> 2-02</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-03-cts-day2"><span class="nav-number">6.</span> <span class="nav-text"> 2-03 CTS Day2</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-04"><span class="nav-number">7.</span> <span class="nav-text"> 2-04</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -169,7 +172,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://platelet.top/2023/11/01/fast-mod/">
+    <link itemprop="mainEntityOfPage" href="https://platelet.top/2024/02/07/cts2024/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -182,12 +185,12 @@
     </span>
 
     <span hidden itemprop="post" itemscope itemtype="http://schema.org/CreativeWork">
-      <meta itemprop="name" content="在常量模数下将取模速度提高一倍 | platelet's blog">
+      <meta itemprop="name" content="cts2024 | platelet's blog">
       <meta itemprop="description" content="">
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          在常量模数下将取模速度提高一倍
+          cts2024
         </h1>
 
         <div class="post-meta-container">
@@ -197,9 +200,15 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2023-11-01 21:57:10 / 修改时间：22:00:10" itemprop="dateCreated datePublished" datetime="2023-11-01T21:57:10+08:00">2023-11-01</time>
+      <time title="创建时间：2024-02-07 22:15:50" itemprop="dateCreated datePublished" datetime="2024-02-07T22:15:50+08:00">2024-02-07</time>
+    </span>
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar-check"></i>
+      </span>
+      <span class="post-meta-item-text">更新于</span>
+      <time title="修改时间：2024-02-08 19:57:53" itemprop="dateModified" datetime="2024-02-08T19:57:53+08:00">2024-02-08</time>
     </span>
 
   
@@ -211,8 +220,26 @@
     
     
     
-    <div class="post-body" itemprop="articleBody"><p><a target="_blank" rel="noopener" href="https://codeforces.com/blog/entry/111566">我在 codeforces 上发的原文</a></p>
-<span id="more"></span><link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
+    <div class="post-body" itemprop="articleBody"><p>我终于迎来了我 OI 生涯的最后一站–国家队选拔（CTS）。相比于 NOI，CTS 给我留下了更愉快的回忆。由于 CTS 安排在 WC 期间，所以我和大多数 WC 选手一样，参加了 WC 的所有活动。在 WC 期间，我有幸认识了许多其他集训队的同学，听了有趣的课程，并且还取得了让我高兴的成绩。</p>
+<p>最终选拔出的四名国家队成员已经众所周知，值得一提的是我们寝室独占了两席（这个台词的出处，懂的都懂）。</p>
+<p>如果你对我的集训队论文感兴趣，请点击<a target="_blank" rel="noopener" href="https://github.com/platelett/thesis">这里</a>查看。相比 U 群传出的第一版，这里的版本更新了一些内容。</p>
+<span id="more"></span>
+<h3 id="1-29-报到日"><a class="markdownIt-Anchor" href="#1-29-报到日"></a> 1-29 报到日</h3>
+<p>在我到达重庆育才之前，我在 qq 群里看到很多人抱怨：“如何条件，如何举办 NOI？”他们的不满点在于寝室内没有插座，每层楼只有过道上的 4 个插座，给电脑和手机充电带来了极大的不便。然而，当我到达后，却惊奇地发现空调插头是插在一个插座上的。这意味着我可以把自己带的插线板插上去，不过最后发现那个插座是圆孔的，没办法了。</p>
+<p>我的室友有成都七中的 zzh，还有学军的 zky 和 sjy。能认识闪闪发光的 zky 我还是挺高兴的，奇怪的是，我感觉现在的 zky 和 NOI 时的 zky 长相变化好大。</p>
+<p>有一些人准备了徽章，我白嫖了几个。</p>
+<p><img src="badge-min.jpg" alt="" /></p>
+<p>晚上，最瘦的 zzh 居然会轻微地打呼噜。</p>
+<h3 id="1-30"><a class="markdownIt-Anchor" href="#1-30"></a> 1-30</h3>
+<p>待补。</p>
+<h3 id="1-31"><a class="markdownIt-Anchor" href="#1-31"></a> 1-31</h3>
+<h3 id="2-01-cts-day-1-wc"><a class="markdownIt-Anchor" href="#2-01-cts-day-1-wc"></a> 2-01 CTS Day 1 &amp; WC</h3>
+<h3 id="2-02"><a class="markdownIt-Anchor" href="#2-02"></a> 2-02</h3>
+<h3 id="2-03-cts-day2"><a class="markdownIt-Anchor" href="#2-03-cts-day2"></a> 2-03 CTS Day2</h3>
+<h3 id="2-04"><a class="markdownIt-Anchor" href="#2-04"></a> 2-04</h3>
+<p>上午去看了答辩。</p>
+<p>下午就润了。</p>
+<link rel="stylesheet" href="/css/spoiler.css" type="text/css"><script src="/js/spoiler.js" type="text/javascript" async></script>
     </div>
 
     
@@ -220,19 +247,19 @@
     
 
     <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/CTS-WC-2024-%E6%97%A0%E6%86%BE%E9%80%80%E5%BD%B9%E8%AE%B0/" rel="tag"># CTS / WC 2024 无憾退役记</a>
+          </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2023/11/01/sieve/" rel="prev" title="谈谈筛法">
-                  <i class="fa fa-angle-left"></i> 谈谈筛法
+                <a href="/2023/12/03/ctt2023/" rel="prev" title="CTT 2023 游记">
+                  <i class="fa fa-angle-left"></i> CTT 2023 游记
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2023/12/03/ctt2023/" rel="next" title="CTT 2023 游记">
-                  CTT 2023 游记 <i class="fa fa-angle-right"></i>
-                </a>
             </div>
           </div>
     </footer>
@@ -302,7 +329,7 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.css" integrity="sha256-AJnUHL7dBv6PGaeyPQJcgQPDjt/Hn/PvYZde1iqfp8U=" crossorigin="anonymous">
 
-<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"platelett","repo":"platelett.github.io","client_id":"019ccf0c5fc00da2d39e","client_secret":"62107d94198d8589a43cee96c18197d4977bcafb","admin_user":"platelett","distraction_free_mode":true,"proxy":null,"language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"7c4f7f0ee9b41219d80564a0eb0114ea"}</script>
+<script class="next-config" data-name="gitalk" type="application/json">{"enable":true,"github_id":"platelett","repo":"platelett.github.io","client_id":"019ccf0c5fc00da2d39e","client_secret":"62107d94198d8589a43cee96c18197d4977bcafb","admin_user":"platelett","distraction_free_mode":true,"proxy":null,"language":null,"js":{"url":"https://cdnjs.cloudflare.com/ajax/libs/gitalk/1.8.0/gitalk.min.js","integrity":"sha256-MVK9MGD/XJaGyIghSVrONSnoXoGh3IFxLw0zfvzpxR4="},"path_md5":"d1f13aaa977c32227187f076cef85f45"}</script>
 <script src="/js/third-party/comments/gitalk.js"></script>
 
 </body>
